@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<h2>{{ object.titre }}</h2>
+<p>{{ object.contenu }}</p>
+{% if object.image %}
+<img src="{{ object.image.url }}" width="300">
+{% endif %}
+<br>
+<a href="/update/{{ object.id }}/">Modifier</a>
+<a href="/delete/{{ object.id }}/">Supprimer</a>
+{% endblock %}

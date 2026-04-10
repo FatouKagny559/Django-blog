@@ -1,0 +1,8 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<h2>Articles</h2>
+{% for article in object_list %}
+    <h3>{{ article.titre }}</h3>
+    <a href="/article/{{ article.id }}/">Lire</a>
+{% endfor %}
+{% endblock %}
